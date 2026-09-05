@@ -1,4 +1,4 @@
-package com.example.urlshortener.web.controllers;
+package com.example.urlshortener.controllers;
 
 import com.example.urlshortener.service.RedirectService;
 import java.net.URI;
@@ -20,7 +20,7 @@ public class RedirectController {
     /**
      * Permanent redirect to the original URL. 301 is per the spec; note it is aggressively
      * cached by clients, so a code's destination is effectively immutable once served.
-     * Unknown codes fall through to {@link GlobalExceptionHandler} as 404.
+     * Unknown codes fall through to {@link com.example.urlshortener.web.GlobalExceptionHandler} as 404.
      */
     @GetMapping("/{code}")
     public ResponseEntity<Void> redirect(@PathVariable String code) {

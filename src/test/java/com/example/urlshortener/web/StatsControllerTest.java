@@ -6,9 +6,9 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
+import com.example.urlshortener.controllers.StatsController;
 import com.example.urlshortener.service.ShortUrlNotFoundException;
 import com.example.urlshortener.service.StatsService;
-import com.example.urlshortener.web.controllers.StatsController;
 import com.example.urlshortener.web.dto.StatsResponse;
 import java.time.Instant;
 import org.junit.jupiter.api.Test;

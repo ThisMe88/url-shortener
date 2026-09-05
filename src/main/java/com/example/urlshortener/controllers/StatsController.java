@@ -1,4 +1,4 @@
-package com.example.urlshortener.web.controllers;
+package com.example.urlshortener.controllers;
 
 import com.example.urlshortener.service.StatsService;
 import com.example.urlshortener.web.dto.StatsResponse;
@@ -15,7 +15,7 @@ public class StatsController {
         this.statsService = statsService;
     }
 
-    /** Link analytics for a code. 404 (via {@link GlobalExceptionHandler}) if the code is unknown. */
+    /** Link analytics for a code. 404 (via {@link com.example.urlshortener.web.GlobalExceptionHandler}) if the code is unknown. */
     @GetMapping("/{code}/stats")
     public StatsResponse stats(@PathVariable String code) {
         return statsService.getStats(code);

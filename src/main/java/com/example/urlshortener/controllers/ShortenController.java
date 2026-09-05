@@ -1,4 +1,4 @@
-package com.example.urlshortener.web.controllers;
+package com.example.urlshortener.controllers;
 
 import com.example.urlshortener.config.AppProperties;
 import com.example.urlshortener.domain.ShortUrl;
