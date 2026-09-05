@@ -8,6 +8,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 import com.example.urlshortener.service.ShortUrlNotFoundException;
 import com.example.urlshortener.service.StatsService;
+import com.example.urlshortener.web.controllers.StatsController;
 import com.example.urlshortener.web.dto.StatsResponse;
 import java.time.Instant;
 import org.junit.jupiter.api.Test;

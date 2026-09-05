@@ -1,4 +1,4 @@
-package com.example.urlshortener.web;
+package com.example.urlshortener.web.controllers;
 
 import com.example.urlshortener.service.RedirectService;
 import java.net.URI;

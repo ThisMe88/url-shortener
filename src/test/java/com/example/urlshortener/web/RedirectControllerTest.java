@@ -8,6 +8,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 import com.example.urlshortener.service.RedirectService;
 import com.example.urlshortener.service.ShortUrlNotFoundException;
+import com.example.urlshortener.web.controllers.RedirectController;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;

@@ -14,6 +14,7 @@ import com.example.urlshortener.service.AliasAlreadyExistsException;
 import com.example.urlshortener.service.InvalidUrlException;
 import com.example.urlshortener.service.ShortenResult;
 import com.example.urlshortener.service.ShortenService;
+import com.example.urlshortener.web.controllers.ShortenController;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
