@@ -42,8 +42,10 @@ Configuration (environment variables, with defaults):
 ./mvnw test
 ```
 
-Integration tests start a throwaway PostgreSQL container via Testcontainers, so
-Docker must be running.
+Integration tests start a throwaway PostgreSQL container via Testcontainers.
+If no Docker environment is available they are **skipped** (not failed), so the
+build stays green on machines without Docker; run them with Docker started to
+exercise the full suite.
 
 ## API
 
