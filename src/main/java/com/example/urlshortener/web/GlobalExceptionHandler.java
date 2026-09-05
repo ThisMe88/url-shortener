@@ -4,6 +4,7 @@ import com.example.urlshortener.service.AliasAlreadyExistsException;
 import com.example.urlshortener.service.CodeGenerationException;
 import com.example.urlshortener.service.InvalidAliasException;
 import com.example.urlshortener.service.InvalidUrlException;
+import com.example.urlshortener.service.ShortUrlNotFoundException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
@@ -30,6 +31,11 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(InvalidUrlException.class)
     ProblemDetail onInvalidUrl(InvalidUrlException ex) {
         return ProblemDetail.forStatusAndDetail(HttpStatus.BAD_REQUEST, ex.getMessage());
+    }
+
+    @ExceptionHandler(ShortUrlNotFoundException.class)
+    ProblemDetail onNotFound(ShortUrlNotFoundException ex) {
+        return ProblemDetail.forStatusAndDetail(HttpStatus.NOT_FOUND, ex.getMessage());
     }
 
     @ExceptionHandler(InvalidAliasException.class)
